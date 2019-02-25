@@ -13,7 +13,8 @@
 */
     Route::get('/','HomeController@index')->name('home');
     Route::get('/home','HomeController@index');
-    Route::get('/editor','HomeController@editor');
+    Route::get('/template','HomeController@template');
+    Route::get('/editor/{id}','HomeController@editor');
     Route::get('/contact','HomeController@contact');
     Route::get('/fqa','HomeController@fqa');
     Route::get('/terms','HomeController@terms');
@@ -41,13 +42,19 @@
             Route::post('add', 'IntrolController@postAdd');
 
         });
+        Route::group(['prefix'=>'oder'], function(){
+        Route::get('danhsach', 'OderController@getDanhSach');
+            
+
+        });
     });
     
     
     // Route::get('','HomeController@getIndex');
     
 	Route::get('images-upload', 'HomeController@imagesUpload');
-	Route::post('images-upload', 'HomeController@imagesUploadPost')->name('images.upload');
+    Route::post('images-upload', 'HomeController@imagesUploadPost')->name('images.upload');
+	Route::post('loichuc', 'HomeController@loichuc')->name('loichuc');
 
    
 

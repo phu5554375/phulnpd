@@ -14,18 +14,6 @@
                         </li>
                        
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Giới thiệu<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="danhsach">Danh sách</a>
-                                </li>
-                                <li>
-                                    <a href="#">Thêm giới thiệu</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-cube fa-fw"></i> Oder<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>

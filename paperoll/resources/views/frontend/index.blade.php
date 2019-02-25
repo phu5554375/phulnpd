@@ -18,8 +18,10 @@
             </div>
                     <section class="hello">
                         <article>
-                            <h1>Turn your photos into a concrete roll of paper.</h1>
-                            <a class="start button button--flat" href="{{url('/editor')}}">Get my roll (9.90€)</a>
+                            <h1>
+                            Lưu trữ những kỷ niệm, những khoảng khắc đáng nhớ cùng PrintGo
+                            </h1>
+                            <a class="start button button--flat" href="#sec1"><i class="fa fa-mouse-pointer"></i> Chọn mẫu ngay</a>
                         </article>
                         <aside>
                             <div class="roll"></div>
@@ -30,40 +32,54 @@
         <div id="siteContent" class="isg-front-page">
             <section class="highlights" data-background="#aadaca">
                 <article>
+                     <h2>PrintGo tặng tất cả chị em phụ nữ 1 Album Mini nhân dịp 8-3</h2>
         <ul>
             <li>
-                <img src="paperoll/stock/icons/create-roll.svg" width="200" alt="Create your roll using you social photos."><br><span>Create your roll using<br> you best photos.</span>
+                <img src="paperoll/stock/icons/create-roll.svg" width="200" alt="Create your roll using you social photos."><br><span>Chọn mẫu thiết kế</span>
             </li>
         <li>
             <img src="paperoll/stock/icons/print-roll.svg" width="200" alt="We print it on a concrete roll paper, up to 8 meters !"><br>
-            <span>We print it on a concrete<br>roll of paper, up to 8 meters!</span>
+            <span>Chọn 5 bức ảnh đẹp để in</span>
         </li>
         <li>
-            <img src="paperoll/stock/icons/shipping-roll.svg" width="200" alt="We ship the roll."><br><span>Hold your horses !<br> We ship the roll.</span>
+            <img src="paperoll/stock/icons/shipping-roll.svg" width="200" alt="We ship the roll."><br><span>Nhập thông tin cá nhân để in</span>
         </li>
             </ul>
     </article>
             </section>
 
-    <section class="pictures" data-background="#faf5eb">
+    <section class="pictures" id="sec1" data-background="#faf5eb">
         <article>
-            <h2>Meet Paperoll.</h2>
+            <h2>Chọn khung hình cho Album của bạn nhé</h2>
             
             
 
-            @foreach ($tbl_intros as $tbl_intro)
-            <div class="pictures-item">
-                <div class="pictures-item-image {{$tbl_intro-> class_attr}}" style="background-image: url({{$tbl_intro-> image}})"></div>
-                <div class="pictures-item-text">
-                    <h3>{{$tbl_intro-> name}}</h3>
-                    <p>{{$tbl_intro-> desc}}</p>
-                </div></div>
-            @endforeach
+            <div class="container">
 
+            <div class="col-md-4 tem1">
+                <a href="{{url('/editor/1')}}"><img src="paperoll/assets/img/111.png"></a>
+            </div>
 
-                        <div class="call-button">
-                            <a class="start button button--flat" href="{{url('/editor')}}"><i class="fa fa-magic" aria-hidden="true"></i>&nbsp; Get my roll (9.90€)</a>
-                        </div>
+            <div class="col-md-4 tem1">
+                <a href="{{url('/editor/2')}}"><img src="paperoll/assets/img/222.png">
+                </a>
+            </div>
+            <div class="col-md-4 tem1"><a href="{{url('/editor/3')}}"><img src="paperoll/assets/img/333.png"></a></div>
+
+            <div class="col-md-4 tem1"><a href="{{url('/editor/4')}}"><img src="paperoll/assets/img/444.png"></a></div>
+
+            <div class="col-md-4 tem1"><a href="{{url('/editor/5')}}"><img src="paperoll/assets/img/555.png"></a></div>
+
+            <div class="col-md-4 tem1"><a href="{{url('/editor/6')}}"><img src="paperoll/assets/img/666.png"></a></div>
+
+            <div class="col-md-4 tem1"><a href="{{url('/editor/7')}}"><img src="paperoll/assets/img/777.png"></a></div>
+
+            <div class="col-md-4 tem1"><a href="{{url('/editor/8')}}"><img src="paperoll/assets/img/888.png"></a></div>
+
+            <div class="col-md-4 tem1"><a href="{{url('/editor/9')}}"><img src="paperoll/assets/img/999.png"></a></div>
+
+        </div>
+               
                     </article>
                 </section>
                 <section class="newsletter">
@@ -87,7 +103,17 @@
     
     <!-- END Site Footer -->
     </div>
-
+<script>
+    $(document).ready(function() {
+  $("a[href*='#']:not([href='#])").click(function() {
+    let target = $(this).attr("href");
+    $('html,body').stop().animate({
+      scrollTop: $(target).offset().top
+    }, 1000);
+    event.preventDefault();
+  });
+});
+</script>
     @endsection
   
 

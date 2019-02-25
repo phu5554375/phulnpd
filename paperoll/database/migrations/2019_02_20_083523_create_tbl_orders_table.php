@@ -17,6 +17,8 @@ class CreateTblOrdersTable extends Migration
              $table->increments('id');
              $table->string('email');
               $table->string('image');
+              $table->string('congratu');
+              $table->string('background');
             $table->timestamps();
         });
     }
